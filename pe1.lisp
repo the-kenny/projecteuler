@@ -10,4 +10,4 @@
         ((or (= 0 (mod n 3)) (= (mod n 5) 0)) (sum-naturals (1- n) (+ acc n)))
         (t (sum-naturals (1- n) acc))))
 
-(print (sum-naturals 1000))
+(print (sum-naturals 999))

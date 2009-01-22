@@ -8,7 +8,7 @@
 (defun largest-product-of-consecutive (number-string length)
   (loop for i from 0 to (- (length number-string) length)
         maximizing (apply #'* (map 'list 
-                                   #'(lambda (x) (parse-integer (string x))) ;Parse the character to an integer
+								   #'digit-char-p ;Parse the character to an integer
 								   (subseq number-string i (+ i length)))))) ;Do this for the next five digits beginning at i
 
 (defun euler8 ()

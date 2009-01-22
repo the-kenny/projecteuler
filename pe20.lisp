@@ -11,8 +11,7 @@
     (factorial (1- n) (* acc n))))
 
 (defun explode-integer (n)
-  (loop for c across (write-to-string n)
-        collect (parse-integer (string c))))
+  (map 'list #'digit-char-p (write-to-string n)))
 
 (defun euler20 ()
   (apply #'+ (explode-integer (factorial 100))))
